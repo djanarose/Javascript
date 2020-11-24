@@ -1,0 +1,141 @@
+* {
+	font-family: Verdana, Tahoma, sans-serif;
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #272727;
+	color: #ffffff;
+}
+
+header, main {
+	margin: 0 auto;
+	max-width: 80%;
+}
+
+header {
+	padding: 25px;
+	background: #747474;
+	background-image: linear-gradient(to right, #272727, #747474);
+	display: flex;
+	justify-content: center;	
+}
+
+main {
+/*	padding: 0px 25px;
+*/	background: #ffffff;	
+}
+
+.add-task {
+	display: flex;
+	justify-content: center;
+	padding: 25px;
+	color: #272727;
+}
+.add-task input {
+	border: 0;
+	border-bottom: 1px solid #272727;
+	outline: none;
+	transition: border 150ms ease-in-out;
+}
+.add-task input::placeholder {
+	opacity: 1;
+	transition: opacity 150ms ease-in-out;
+}
+.add-task input:focus {
+	border-bottom-width: 2px;
+}
+.add-task input:focus::placeholder {
+	opacity: 0.5;
+}
+
+.add-task-btn {
+	border: 0;
+	background: 0;
+	color: #272727;
+	outline: none;
+	cursor: pointer;
+	transition: color 150ms ease-in-out;
+}
+.add-task-btn:hover {
+	color: #747474;
+}
+.add-task-btn:active {
+	color: #ff652f;
+}
+
+.task-list-header {
+	position: relative;
+	background: #747474;
+}
+.task-list-header h2 {
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	background-image: linear-gradient(to right, #272727, #747474)
+}
+
+.clear-completed-btn {
+	position: absolute;
+	right: 5vw;
+	top: 16px;
+	border: 0;
+	background: 0;
+	color: #ffffff;
+	font-size: 0.5em;
+	cursor: pointer;
+	transition: color 150ms ease-in-out;
+	outline: none;
+}
+.clear-completed-btn:hover {
+	color: #272727;
+}
+.clear-completed-btn:active {
+	color: #ff652f;
+}
+
+.task-list-wrapper {
+	background: #ffffff;
+	color: #272727;
+}
+
+.task-list {
+	padding: 15px 25px 25px 25px;
+}
+.task-list li {
+	list-style-type: none;
+	cursor: pointer;
+	padding: 10px 0;
+	border-bottom: 1px solid #747474;
+}
+.task-list li:hover [type="checkbox"] {
+	transform: scale(1.5);
+	color: #747474;
+}
+.task-list li:active input {
+	transform: scale(1.2);
+	color: #ff652f;
+}
+
+.task-list input {
+	margin: 0 5px;
+}
+
+.task-list label {
+	position: relative;
+	cursor: pointer;
+	opacity: 1;
+	transition: opacity 150ms ease-in-out;
+	transition: color 150ms ease-in-out;
+}
+
+[type="checkbox"] {
+	transform: scale(1.2);
+}
+
+[type="checkbox"]:checked + label {
+	opacity: 0.5;
+}
